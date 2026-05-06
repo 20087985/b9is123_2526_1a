@@ -1,16 +1,19 @@
-///////Create a function to read a string of the form:
-// factors : multiples
-//and output a string:
-// result : factors : multiples
+let getSumOfMultiples = (factors, multiples) => {
+  let sum =0;
+  for (let num of multiples){
+    if (factors.some(f => num % f === 0)){
+      sum = sum + num;
+    }
+  }
+  return sum;
+};
 
-//where factors and multiples are space separated lists of integers
-
-// Example Input : 
-// 3 5 : 1 2 3 4 5 6 7 8 9
-
-// Example Output : 
-// 23 : 3 5 : 1 2 3 4 5 6 7 8 9
-
-//keep code DRY (Don't repeat yourself)
-
-//if you're finished, code it into a page
+let processEulerString = (inputString) => {
+  let parts = inputString.split(":");
+  let factors = parts[0].trim( ).split(" ").map(Numbeer);
+  let multiples = parts[1].trim( ).split(" ").map(Numbeer);
+  let resultSum = getSumOfMultiples(factors,multiples);
+  let output = resultSum + " : " + parts[0].trim() + " : " + parts[1].trim();
+  alert(output);
+  return output
+};
