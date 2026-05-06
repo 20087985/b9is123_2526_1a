@@ -1,56 +1,77 @@
-<HTml>
-    <head>
-        <script src="ex1.js"></script>
-        <script src="ex2.js"></script>
-    </head>
-    <body>
-        <h1>Exercise 1</h1>
-        <p>        <input type="text" id="weight">
-        <!--//replace check function.-->
-        <button onclick="check()">Check Baggage</button></p>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Programming Exercises</title>
+    <script src="ex1.js"></script>
+    <script src="ex2.js"></script>
+    <script src="ex3.js"></script>
+    <script src="ex4.js"></script>
+    <script src="ex5.js"></script>
+    <script src="ex6.js"></script>
+</head>
+<body>
 
-<p>
-        <input type="text" id="removed" style='display:none;'>
-        <!--//replace remove function.-->
-        <button id='remB' onclick="remove()" style='display:none;'>Remove this much baggage (kg)</button>
+    <h1>Exercise 1: Baggage Check</h1>
+    <p>
+        <label>Enter Weight (kg):</label>
+        <input type="text" id="weight">
+        <button onclick="check()">Check Baggage</button>
+    </p>
+    <p>
+        <input type="text" id="removed" style='display:none;' placeholder="Amount to remove">
+        <button id='remB' onclick="remove()" style='display:none;'>Remove Weight</button>
+    </p>
 
-</p>
+    <hr>
 
-<h1>Exercise 2</h1>
-    <p><button onclick="euler1()">Press for solution to project Euler</button>
-</p>
+    <h1>Exercise 2: Project Euler</h1>
+    <p>
+        <button onclick="euler1()">Standard Euler Q1 (3, 5, 1000)</button>
+    </p>
+    <p>
+        <label>A:</label> <input type="text" id="a" size="5">
+        <label>B:</label> <input type="text" id="b" size="5">
+        <label>N:</label> <input type="text" id="n" size="5">
+        <button onclick="eulerCustom()">Custom Euler Sum</button>
+    </p>
 
-<p>
-       <label for="a:">A</label> <input type="text" id="a">
-        <label for="b:">B</label><input type="text" id="b">
-       <label for="n:">N</label> <input type="text" id="n">
+    <hr>
 
-</p>
-    <p><button onclick="eulerCustom()">Press for custom sum of multiples</button> 
-        Find the sum of multiples of a or b less than n, where a,b and n are integer parameters
+    <h1>Exercise 3: Lists and Multiples</h1>
+    <p>
+        <label>A:</label> <input type="text" id="a1" size="5">
+        <label>B:</label> <input type="text" id="b1" size="5">
+        <label>List L (space separated):</label> <input type="text" id="l">
+        <button onclick="eulerlist()">Sum List Multiples</button>
+    </p>
+    <p>
+        <label>List A (Factors):</label> <input type="text" id="aList">
+        <label>List L (Multiples):</label> <input type="text" id="mList">
+        <br><br>
+        <button onclick="euler2Lists()">Sum (List A length 2)</button>
+        <button onclick="euler2Lists1()">Sum (Any length List A)</button>
+    </p>
 
- <h1>Exercise 3</h1>
-<p>
-Sum of multiples of a or b in list l.
-       <label for="a:">A</label> <input type="text" id="a1"><br>
-        <label for="b:">B</label><input type="text" id="b1"><br>
-       <label for="l:">L</label> <input type="text" id="l">
+    <hr>
 
-</p>
-    <p><button onclick="eulerlist()">Press for solution to project Euler</button>
-</p>
+    <h1>Exercise 4 & 5: String Parsing & Errors</h1>
+    <p>
+        <label>Enter String (Format: factors : multiples):</label><br>
+        <input type="text" id="eulerString" style="width: 300px;" placeholder="3 5 : 1 2 3 4 5">
+    </p>
+    <p>
+        <button onclick="processEulerString(document.getElementById('eulerString').value)">Exercise 4: Process String</button>
+        <button onclick="alert(processEulerCorrupt(document.getElementById('eulerString').value))">Exercise 5: Handle Errors</button>
+    </p>
 
-<p>
- 
-    Part 2: compute the sum of multiples of elements in list a, found in list l. List a is of length 2
-    <br>
-    Part 3: compute the sum of multiples of elements in list a, found in list l. List a may be any length
-       <label for="aList:">A</label> <input type="text" id="aList">
-        <label for="mList:">L</label> <input type="text" id="mList">
+    <hr>
 
-</p>
-    <p><button onclick="euler2Lists()">Press for custom sum of multiples</button>
-    <p><button onclick="euler2Lists1()">Press for custom sum of multiples</button>
+    <h1>Exercise 6: GitHub API</h1>
+    <p>
+        <label>GitHub Username:</label>
+        <input type="text" id="ghUser" placeholder="e.g. octocat">
+        <button onclick="getMostForkedRepo(document.getElementById('ghUser').value)">Find Most Forked Repo</button>
+    </p>
 
-    </body>
-</HTml>
+</body>
+</html>
