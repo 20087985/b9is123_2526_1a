@@ -26,7 +26,6 @@ let eulerCustom = () => {
 
     for (let i = 1; i < valN; i++) {
         if (i % valA === 0 || i % valB === 0) {
-            // Add 'i' to the sum, not just +1
             sum += i;
         }
     }
