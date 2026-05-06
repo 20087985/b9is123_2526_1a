@@ -1,13 +1,46 @@
-let listEuler1=(a,b,l)=>0;//obviously wrong - compute the sum of multiples of a or b in list l
-let listEuler2=(a,l)=>0;//obviously wrong - compute the sum of multiples in list a found in list l
-let listEuler3=(a,l)=>0;//obviously wrong - compute the sum of multiples in list a found in list l
+let listEuler1=(a,b,l)=>{
+    let sum =0;
+    for (let num of l) {
+        if(num % a === 0 || num % b === 0){
+            sum = sum + num;
+        }
+        
+    }
+    return sum;
+    
+}
+
+let listEuler2=(a,l)=>{
+    let sum = 0;
+    for (let num of l){
+        if (a.some(divisor => num % divisor === 0)
+        {
+            sum = sum + num;
+        }
+        
+    }
+    return sum;
+}
+let listEuler3=(a,l)=>{
+    return l.reduce((total, num) =>{
+        let isMultiple = false;
+        for (let divisor of a){
+            if(num % divisor === 0) isMultiple = true;
+            
+        }
+        return isMultiple ? total + num : total;
+    }, 0);
+}
+
 
 let eulerlist=()=>
 {
     a=2//can un-hardcode
     b=3
-    l=[1,2,3,4,5,6,7,9,10,10,10]  //document.getElementById('l').value.split(" ").map((x=>parseInt(x)); // if l is space separated numbers
-    //call listEuler1 and alert. - compute the sum of multiples of a or b in list l
+    l=[1,2,3,4,5,6,7,9,10,10,10]
+    let result = listEuler1(a,b,l);
+    alert("The sum is:" + result);
+   
 }
 let euler2Lists=()=>
 {
