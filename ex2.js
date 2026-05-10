@@ -18,11 +18,6 @@ let eulerCustom = () => {
 
     let sum = 0;
 
-   
-    if (isNaN(valA) || isNaN(valB) || isNaN(valN)) {
-        alert("Please enter valid numbers for A, B, and N.");
-        return;
-    }
 
     for (let i = 1; i < valN; i++) {
         if (i % valA === 0 || i % valB === 0) {
