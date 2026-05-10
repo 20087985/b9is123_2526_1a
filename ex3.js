@@ -11,13 +11,16 @@ let listEuler1 = (a, b, l) => {
 }
 
 let listEuler2 = (a, l) => {
+
+    let filteredList = l.filter(num => a.some(divisor => num % divisor === 0));
     let sum = 0;
-    for (let num of l) {
-        if (a.some(divisor => num % divisor === 0)) {
-            sum += num;
-        }
+    for (let num of filteredList) {
+
+        sum += num;
+
     }
     return sum;
+
 }
 
 
