@@ -20,7 +20,7 @@ let getMostForkedRepo = (username) => {
             let topRepo = repos[0];
 
            
-            let message = `Repo with most fork is: ${topRepo.name} with ${topRepo.forks_count} forks.`;
+            let message = `Repo with most fork is: ${topRepo.name} with ${topRepo.forks_count} forks`;
             
             alert(message);
         });
