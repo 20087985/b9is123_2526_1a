@@ -9,12 +9,13 @@ let listEuler1 = (a, b, l) => {
 }
 
 let listEuler2 = (a, l) => {
+  
+    let filteredList = l.filter(num => a.some(divisor => num % divisor === 0));
+    
+   
     let sum = 0;
-    for (let num of l) {
-        // Added the missing closing parenthesis here )
-        if (a.some(divisor => num % divisor === 0)) {
-            sum = sum + num;
-        }
+    for (let num of filteredList) {
+        sum += num;
     }
     return sum;
 }
