@@ -54,14 +54,26 @@
 
     <hr>
 
-    <h1>Exercise 4 & 5: String Parsing & Errors</h1>
+ <hr>
+
+    <h1>Exercise 4: String Parsing</h1>
     <p>
         <label>Enter String (Format: factors : multiples):</label><br>
-        <input type="text" id="eulerString" style="width: 300px;" placeholder="3 5 : 1 2 3 4 5">
+        <input type="text" id="eulerString4" style="width: 300px;" placeholder="3 5 : 1 2 3 4 5">
+        <button onclick="processEulerString(document.getElementById('eulerString4').value)">Process String</button>
+    </p>
+
+    <hr>
+
+    <h1>Exercise 5: Error Handling</h1>
+    <p>
+        <label>Enter String (Try adding "hello" or removing the colon):</label><br>
+        <input type="text" id="eulerString5" style="width: 300px;" placeholder="3 hello : 1 2 3">
     </p>
     <p>
-        <button onclick="processEulerString(document.getElementById('eulerString').value)">Exercise 4: Process String</button>
-        <button onclick="alert(processEulerCorrupt(document.getElementById('eulerString').value))">Exercise 5: Handle Errors</button>
+        <button onclick="processEulerCorrupt(document.getElementById('eulerString5').value)">Strict Mode (Corrupt)</button>
+        
+        <button onclick="processEulerOmitCorrupt(document.getElementById('eulerString5').value)">Forgiving Mode (Omit)</button>
     </p>
 
     <hr>
