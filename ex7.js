@@ -1,6 +1,10 @@
 const template = document.createElement('template');
 template.innerHTML = `
   <style>
+  .info ::slotted(div) {
+  margin: 10px 0;
+  color: #333;
+  }
   .user-card {
 		font-family: 'Arial', sans-serif;
 		background: #f4f4f4;
