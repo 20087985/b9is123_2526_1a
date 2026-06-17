@@ -3,7 +3,7 @@
 
 
 
-def f3(a,l):
+def f3(a,l){
  let filteredList = l.filter(num => a.some(divisor => num % divisor === 0));
     let sum = 0;
     for (let num of filteredList) {
@@ -13,6 +13,7 @@ def f3(a,l):
     }
     console.log(sum);
     return sum;
+}
 
 
    
