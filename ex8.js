@@ -11,7 +11,7 @@ def f3(a,l){
         sum += num;
 
     }
-    console.log(sum);
+    alert('sum of multiples:' + sum);
     return sum;
 }
 
